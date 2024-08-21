@@ -13,7 +13,7 @@ actor {
 
     // Construct canister request
     let request : Types.CanisterHttpRequestArgs = {
-      url = url;
+      url;
       max_response_bytes = null;
       headers = [];
       body = null;
@@ -21,7 +21,7 @@ actor {
       transform = ?transform_context;
     };
     Cycles.add(220_000_000_000);
-    let ic : Types.IC = actor ("aaaaa-aa");
+    let ic : Types.IC = actor "aaaaa-aa";
     let response : Types.CanisterHttpResponsePayload = await ic.http_request(request);
     response;
   };
