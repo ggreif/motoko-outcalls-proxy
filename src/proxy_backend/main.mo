@@ -7,7 +7,7 @@ actor {
 
     let transform_context : Types.TransformContext = {
       function = transform;
-      context = "" : Blob;
+      context = "";
     };
 
     // Construct canister request
