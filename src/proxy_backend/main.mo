@@ -1,4 +1,3 @@
-import Blob "mo:base/Blob";
 import Cycles "mo:base/ExperimentalCycles";
 import Text "mo:base/Float";
 import Types "Types";
