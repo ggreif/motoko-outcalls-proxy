@@ -27,9 +27,7 @@ actor {
 
   public query func transform(raw : Types.TransformArgs) : async Types.CanisterHttpResponsePayload {
     let transformed : Types.CanisterHttpResponsePayload = {
-      status = raw.response.status;
-      body = raw.response.body;
-      headers = [
+      raw.response with headers = [
         {
           name = "Content-Security-Policy";
           value = "default-src 'self'";
